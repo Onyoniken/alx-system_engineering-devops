@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Write Bash script displaying numbers 1 - 20 and:
+
+# display 4 then bad luck from China for the 4th loop iteration
+# display 9 then bad luck from Japan for the 9th loop iteration
+# display 17 then bad luck from Italy for the 17th loop iteration
+# Requirements:
+
+# use the while loop (for and until are forbidden)
+# use the case statement
+
+k=1
+
+while [ $k -le 20 ]
+do
+  echo "$k"
+  case $k in
+    "4") echo "bad luck from China";;
+    "9") echo "bad luck from Japan";;
+    "17") echo "bad luck from Italy";;
+  esac
+  (( k++ ))
+done
