@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# the script displays its own PID
+
+echo $$

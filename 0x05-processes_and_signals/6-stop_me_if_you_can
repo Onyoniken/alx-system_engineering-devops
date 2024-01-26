@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# the script stops 4-to_infinity_and_beyond process
+# Requirement: you cnat use kill/ killall
+
+pkill -f 4-to_infinity_and_beyond
