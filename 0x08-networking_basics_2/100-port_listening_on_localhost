@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# the script make local host on port 98
+
+nc -1 localhost 98
