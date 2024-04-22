@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""ACeess rest API for todo list employees"""
+"""Accessing a REST API for todo lists of employees"""
 
 import json
 import requests
 import sys
+
 
 if __name__ == '__main__':
     url = "https://jsonplaceholder.typicode.com/users"
@@ -19,12 +20,12 @@ if __name__ == '__main__':
         url = url + '/todos/'
         response = requests.get(url)
         tasks = response.json()
-        dictionary[user_id] = {}
+        dictionary[user_id] = []
         for task in tasks:
             dictionary[user_id].append({
-                "tasks": task.get('title'),
+                "task": task.get('title'),
                 "completed": task.get('completed'),
                 "username": username
-                })
-    with open('todo_all_employeed.json', 'w') as file:
+            })
+    with open('todo_all_employees.json', 'w') as file:
         json.dump(dictionary, file)

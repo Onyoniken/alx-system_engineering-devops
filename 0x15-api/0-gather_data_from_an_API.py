@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""accessing REST API to do list"""
+"""Accessing a REST API for todo lists of employees"""
 
 import requests
 import sys
+
 
 if __name__ == '__main__':
     employeeId = sys.argv[1]
@@ -24,7 +25,7 @@ if __name__ == '__main__':
             done += 1
 
     print("Employee {} is done with tasks({}/{}):"
-            .format(employeeName, done, len(tasks)))
+          .format(employeeName, done, len(tasks)))
 
     for task in done_tasks:
         print("\t {}".format(task.get('title')))
